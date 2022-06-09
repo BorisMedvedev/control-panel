@@ -1,0 +1,93 @@
+.hero {
+  height: 100vh;
+  text-align: center;
+  padding: 200px 0 100px;
+  color: $white;
+  background-image: url("../../images/bg2x.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  &__title {
+    position: relative;
+    margin: 45px 0 0 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: $forget;
+    &::before{
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      content: '';
+      background-image: url('../../images/decor.png');
+      width: 350px;
+      height: 27px;
+    }
+
+    & span {
+      color: #ffc899;
+    }
+  }
+}
+
+.logo {
+  &__img {
+    margin: 0 auto;
+  }
+}
+
+.text {
+  position: relative;
+  display: block;
+  color: $forget;
+  font-size: 18px;
+  overflow: hidden;
+  max-height: 185px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 150%;
+    height: 200%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    z-index: 100;
+  }
+}
+
+.sub {
+  position: absolute;
+  display: block;
+  width: 290px;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.2s;
+
+  & li {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    padding: 5px 10px;
+    display: block;
+    background-color: #ffc899;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #e47310;
+    }
+  }
+}
+
+.text:hover {
+  overflow: visible;
+}

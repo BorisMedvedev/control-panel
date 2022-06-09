@@ -1,0 +1,68 @@
+.header {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  background-color: rgba(101, 31, 58, 0.3);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav {
+  padding: 50px 0;
+  transition: transform 0.5s;
+
+  &__list {
+
+    display: flex;
+
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 70px;
+
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color: $forget;
+  }
+}
+
+.nav.btn-active {
+  transform: translateX(0);
+}
+
+.exit-btn {
+  position: relative;
+  padding-left: 22px;
+  color: $white;
+
+
+
+
+}
+
+.exit-btn-mabail {
+  max-width: 115px;
+  padding: 10px 40px;
+  border: 2px solid #9d5cd0;
+  border-radius: 100px;
+  display: none;
+
+}
+
+.exit-btn-mabail::after {}
+
+.exit-btn-mabail::before {
+  left: 15px;
+  top: 14px;
+}
